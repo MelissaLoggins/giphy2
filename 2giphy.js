@@ -21,6 +21,18 @@ $(document).ready(function(){
       $("#GIFArea").empty();
 
       for (var i = 0; i < results.length; i++) {
+   //Are where we make the gifs pause. 
+      var jerkDiv = $('<div id="jerkDiv">');
+      var p = $('<p>').text("Rating: " + results[i].rating);
+      var jerkImage = $('<img>');
+      jerkImage.attr('src', results[i].images.fixed_height_still.url);
+      jerkImage.attr('data-still', results[i].images.fixed_height_still.url);
+      jerkImage.attr('data-animate', results[i].images.fixed_height.url);
+      jerkImage.attr('class', 'jerkImage');
+      jerkImage.attr('data-state', 'still');
+      jerkDiv.append(p);
+      jerkDiv.append(jerkImage);
+      $('GIFArea').append(jerkDiv);
 
       $("#GIFArea").prepend("<p>Rating: " + response.data[i].rating + "</p>");
       $("#GIFArea").prepend("<img src='" + response.data[i].images.downsized.url + "'>");
