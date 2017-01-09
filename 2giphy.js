@@ -32,10 +32,10 @@ $(document).ready(function(){
       jerkImage.attr('data-state', 'still');
       jerkDiv.append(p);
       jerkDiv.append(jerkImage);
-      $('GIFArea').append(jerkDiv);
+      $('#GIFArea').append(jerkDiv);
 
-      $("#GIFArea").prepend("<p>Rating: " + response.data[i].rating + "</p>");
-      $("#GIFArea").prepend("<img src='" + response.data[i].images.downsized.url + "'>");
+      // $("#GIFArea").prepend("<p>Rating: " + response.data[i].rating + "</p>");
+      // $("#GIFArea").prepend("<img src='" + response.data[i].images.downsized.url + "'>");
 
        $("#GIFArea").on("click", function() {
 
@@ -43,4 +43,10 @@ $(document).ready(function(){
        };
    });
 });
+
+$(document).on('click', '.jerkImage', function() {
+	
+})
+
+
 });     
