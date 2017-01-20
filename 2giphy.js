@@ -34,10 +34,8 @@ $(document).ready(function(){
       jerkDiv.append(jerkImage);
       $('#GIFArea').append(jerkDiv);
 
-      // $("#GIFArea").prepend("<p>Rating: " + response.data[i].rating + "</p>");
-      // $("#GIFArea").prepend("<img src='" + response.data[i].images.downsized.url + "'>");
 
-       $("#GIFArea").on("click", function() {
+      $("#GIFArea").on("click", function() {
 
 		});	
        };
@@ -45,8 +43,16 @@ $(document).ready(function(){
 });
 
 $(document).on('click', '.jerkImage', function() {
-	
-})
+    var state = $(this).attr('data-state'); 
+    
+    if (state === 'still') {
+        $(this).attr('src', $(this).data('animate'));
+        $(this).attr('data-state', 'animate');
+    } else {
+        $(this).attr('src', $(this).data('still'));
+        $(this).attr('data-state', 'still');
+    }
+});
+});
 
-
-});     
+   
