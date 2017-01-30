@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+  
    // Event listener for the buttons
      $("button").on("click", function() {
        console.log("Button Clicked")
@@ -52,7 +52,32 @@ $(document).on('click', '.jerkImage', function() {
         $(this).attr('src', $(this).data('still'));
         $(this).attr('data-state', 'still');
     }
+
+    function renderButtons() { 
+  $("#jerkButton").empty(); 
+//   for(var i = 0; i < x.length; i++) { 
+//     var a = $("<button>"); 
+//     a.addClass("jerks"); 
+//     a.attr("data-name", jerks[i]); 
+//     a.text(jerks[i]); 
+//     $("#jerkButton").append(a); 
+//   } 
+
+//   $("#addJerk").on("click", function(event) {
+//     event.preventDefault();
+//     var jerk = $("#usersJerk").val().trim();
+//     jerks.push();
+
+// renderButtons();
+    // })
+   // }
+   }
 });
 });
+
+
+
+
+
 
    

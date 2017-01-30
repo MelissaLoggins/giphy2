@@ -20,6 +20,12 @@ h1 {
 label[for="jerk-input"] {
 	font-size: 24px;
 }
+.btn-default {
+	background-color: #F288A9;
+}
+.btn-default:hover {
+	background-color: #4DBCE9;
+}
 
 .btn-info {
 	margin: 10px;
