@@ -1,2 +1,2 @@
 # giphy2
-A second attempt at the week 6 assignment.
+ A dynamic web page that populates with gifs using the GIPHY API with Javascript and AJAX queries.
